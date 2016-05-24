@@ -225,13 +225,13 @@ fieldset[disabled] .btn-xl.active {
 }
 header {
   background-image: url('../img/os_donos_index.png');
-  background-repeat: none;
+  background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+  -o-background-size: 100%;
   text-align: center;
   color: white;
 }
@@ -260,10 +260,10 @@ header .intro-text .intro-heading {
     padding-bottom: 200px;
   }
   header .intro-text .intro-lead-in {
-    
+
   }
   header .intro-text .intro-heading {
-    
+
   }
 }
 section {
@@ -530,7 +530,22 @@ section h3.section-subheading {
 .team-member img {
   margin: 0 auto;
   border: 7px solid white;
+  height: 350px;
+  width: 350px;
 }
+
+@media (max-width: 1052px) {
+    .intro-text{
+        height: 300px;
+        margin-top: 60px;
+    }
+    .team-member img {
+        margin: 0 auto;
+        height: 350px;
+        width: 100%;
+    }
+}
+
 .team-member h4 {
   margin-top: 25px;
   margin-bottom: 0;
@@ -545,9 +560,9 @@ aside.clients img {
 section#contact {
   background-color: #222222;
   /*background-image: url('../img/contato.png');*/
-  background-position: center;    
+  background-position: center;
   background-repeat: no-repeat;
-     
+
 }
 section#contact .section-heading {
   color: white;
@@ -729,7 +744,13 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #fed136;
 }
+
 .logo {
-  background-image: url('../img/logo-donos.png');
-  background-repeat: none;
+    z-index: 3;
+    background-repeat: no-repeat;
+    max-width: 100%;
+}
+
+.intro-text{
+    text-align: center;
 }
